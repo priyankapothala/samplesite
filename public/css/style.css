@@ -12,12 +12,40 @@ body {
     color: #F5AA23 !important;
 }
 
-nav ul a:hover{
+.brand-logo {
+    width: 160px;
+}
+
+nav ul a:hover {
     color: #F5AA23 !important;
 }
 
-.brand-logo {
-    width: 160px;
+nav .sub-menu li a {
+    height: 40px;
+    line-height: 40px;
+    font-size: 13px;
+}
+
+.sub-menu {
+    display: none;
+    position: absolute;
+    min-width: 230px;
+    max-width: 230px;
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 5px;
+}
+
+.sub-menu:before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid #222;
+    position: absolute;
+    right: 30px;
+    top: -10px;
 }
 
 .text-cont {
@@ -115,8 +143,15 @@ nav#page-header.fixed {
     background: #F0F0F0;
     margin: 16px;
 }
-
-.partners-container {
+.pricing-element{
+    padding: 16px;
+    width: 150px;
+    height: 200px;
+    overflow: hidden;
+    background: #F0F0F0;
+    margin: 16px;
+}
+.flex-container {
     display: -ms-flexbox;
     display: -webkit-flex;
     display: flex;
@@ -206,32 +241,13 @@ p {
     transition: box-shadow ease-in-out 0.5s;
 }
 
-.sub-menu {
-    display: none;
-    position: absolute;
-    max-width: 230px;
-    background: rgba(0, 0, 0, 0.7);
-    border-radius: 5px;
-}
-
-.sub-menu:before {
-    content: "";
-    display: block;
-    width: 0;
-    height: 0;
-    border-left: 10px solid transparent;
-    border-right: 10px solid transparent;
-    border-bottom: 10px solid #222;
-    position: absolute;
-    right: 30px;
-    top: -10px;
-}
-
 footer.page-footer {
     margin: 0;
 }
 
-.footer ul li > a {}
+footer ul li > a {
+    color: #FFFFFF;
+}
 
 .footer-store-img {
     width: 200px;
@@ -271,9 +287,6 @@ footer.page-footer {
         border-top: 1px solid #D4D4D4;
         border-left: 0px;
     }
-    .custom-container {
-        padding: 16px 0px;
-    }
     .icon-block {
         padding: 12px;
         margin: 8px 0px;
@@ -282,6 +295,20 @@ footer.page-footer {
         height: 10px;
         width: 10px;
     }
+}
+
+.custom-list li {
+    ddisplay: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+    line-height: 28px;
+}
+
+.border-bottom {
+    border-bottom: 1px solid #D4D4D4;
 }
 
 .subscribe-container {
@@ -295,12 +322,17 @@ footer.page-footer {
 
 /* label focus color */
 
-.input-field input[type=email]:focus + label {
-    color: #F5AA23;
+.input-field input,
+.input-field textarea {
+    border-bottom: 1px solid #E5E5E5;
 }
 
-.input-field input[type=text]:focus + label {
-    color: #F5AA23;
+.input-field {
+    color: #727272;
+}
+
+.input-field input:focus + label {
+    color: #F5AA23 !important;
 }
 
 .input-field textarea.materialize-textarea:focus + label {
@@ -310,14 +342,9 @@ footer.page-footer {
 
 /* label underline focus color */
 
-.input-field input[type=email]:focus {
-    border-bottom: 1px solid #F5AA23;
-    box-shadow: 0 1px 0 0 #F5AA23;
-}
-
-.input-field input[type=text]:focus {
-    border-bottom: 1px solid #F5AA23;
-    box-shadow: 0 1px 0 0 #F5AA23;
+.input-field input:focus {
+    border-bottom: 1px solid #F5AA23 !important;
+    box-shadow: 0 1px 0 0 #F5AA23 !important;
 }
 
 .input-field textarea.materialize-textarea:focus {
@@ -328,14 +355,9 @@ footer.page-footer {
 
 /* valid color */
 
-.input-field input[type=email].valid {
-    border-bottom: 1px solid #F5AA23;
-    box-shadow: 0 1px 0 0 #F5AA23;
-}
-
-.input-field input[type=text].valid {
-    border-bottom: 1px solid #F5AA23;
-    box-shadow: 0 1px 0 0 #F5AA23;
+.input-field input.valid {
+    border-bottom: 1px solid #E5E5E5;
+    box-shadow: 0 1px 0 0 #E5E5E5;
 }
 
 .input-field textarea.materialize-textarea.valid {
@@ -346,12 +368,7 @@ footer.page-footer {
 
 /* invalid color */
 
-.input-field input[type=email].invalid {
-    border-bottom: 1px solid red;
-    box-shadow: 0 1px 0 0 red;
-}
-
-.input-field input[type=text].invalid {
+.input-field input.invalid {
     border-bottom: 1px solid red;
     box-shadow: 0 1px 0 0 red;
 }
