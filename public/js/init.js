@@ -9,15 +9,6 @@
             else
                 $("#page-header").removeClass('fixed');
         });
-        $(document).click(function(event) {
-            $('.sub-menu').hide();
-        })
-        $('.main-menu').click(function(event) {
-            event.stopImmediatePropagation();
-            $('.sub-menu').hide();
-            var elem = event.currentTarget.nextElementSibling;
-            $(elem).show();
-        })
         $('textarea#textarea1').characterCounter();
         $('.datepicker').pickadate({
             selectMonths: true,
