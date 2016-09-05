@@ -9,6 +9,12 @@
             else
                 $("#page-header").removeClass('fixed');
         });
+        $('textarea#textarea1').characterCounter();
+        $('.datepicker').pickadate({
+            selectMonths: true,
+            selectYears: 15
+        });
+        $('select').material_select();
         $('.carousel.carousel-slider').carousel({ full_width: true });
     });
 })(jQuery);
