@@ -26,12 +26,15 @@ nav .sub-menu li a {
     font-size: 13px;
 }
 
+nav .sub-menu li {
+    width: 100%;
+}
+
 .sub-menu {
     display: none;
     position: absolute;
-    min-width: 230px;
     max-width: 230px;
-    background: rgba(0, 0, 0, 0.7);
+    background: rgba(0, 0, 0, 0.9);
     border-radius: 5px;
 }
 
@@ -42,9 +45,9 @@ nav .sub-menu li a {
     height: 0;
     border-left: 10px solid transparent;
     border-right: 10px solid transparent;
-    border-bottom: 10px solid #222;
+    border-bottom: 10px solid rgba(0, 0, 0, 0.9);
     position: absolute;
-    right: 30px;
+    left: 30px;
     top: -10px;
 }
 
@@ -143,14 +146,24 @@ nav#page-header.fixed {
     background: #F0F0F0;
     margin: 16px;
 }
-.pricing-element{
+
+.pricing-header {
     padding: 16px;
-    width: 150px;
-    height: 200px;
+    background: #F5AA23;
+}
+.pricing-content {
+    background: rgba(0, 0, 0, 0.8);
+    color: #FFF;
+    height: 100%;
+    padding: 16px;
+}
+.pricing-element {
+    width: 250px;
+    height: 295px;
     overflow: hidden;
-    background: #F0F0F0;
     margin: 16px;
 }
+
 .flex-container {
     display: -ms-flexbox;
     display: -webkit-flex;

@@ -27,6 +27,8 @@
         $('.carousel.carousel-slider').carousel({ full_width: true });
         //smooth scroll
         $(document).on('click', 'a', function(event) {
+            if (event.currentTarget.getAttribute('href').indexOf('#') == -1)
+                return;
             event.preventDefault();
             $('html, body').animate({
                 scrollTop: $($.attr(this, 'href')).offset().top - 100
