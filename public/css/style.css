@@ -99,9 +99,6 @@ li.main-menu:hover .sub-menu {
     font-weight: 700;
     height: 40px;
     line-height: 40px;
-}
-
-.btn + .btn {
     margin: 8px;
 }
 
@@ -130,7 +127,10 @@ nav#page-header {
 
 nav#page-header ul a {
     color: #FFFFFF;
-    font-weight: 700;
+}
+
+.side-nav li > a {
+    color: #212121 !important;
 }
 
 .nav-dropdown.dropdown-content {
@@ -285,16 +285,20 @@ footer.page-footer {
     margin: 0;
 }
 
-footer ul li > a {
-    color: #FFFFFF;
+footer ul li > a,
+.subscribe-container {
+    color: #BEBEBE;
 }
-
+.social-icons {
+    margin: 16px 0px;
+    color: #BEBEBE;
+}
 .footer-store-img {
     width: 200px;
 }
 
 .parallax-container {
-    min-height: 500px;
+    min-height: 400px;
     line-height: 0;
     height: auto;
     color: rgba(255, 255, 255, .9);
@@ -302,11 +306,6 @@ footer ul li > a {
 
 .parallax-container .section {
     width: 100%;
-}
-
-.social-icons {
-    margin: 16px 0px;
-    color: white;
 }
 
 @media only screen and (max-width: 992px) {
@@ -321,7 +320,21 @@ footer ul li > a {
 
 @media only screen and (max-width: 600px) {
     #index-banner .section {
-        top: 10%;
+        top: 20%;
+    }
+    h4 {
+        font-size: 1.6rem;
+    }
+    .slider .slides li .caption {
+        left: 3%;
+        width: 94%;
+    }
+    .header-title {
+        font-size: 28px;
+    }
+    .btn {
+        margin: 8px 0px;
+        width: 100%;
     }
     .text-cont + .text-cont {
         border-top: 1px solid #D4D4D4;
@@ -355,10 +368,6 @@ footer ul li > a {
 
 .border-bottom {
     border-bottom: 1px solid #D4D4D4;
-}
-
-.subscribe-container {
-    color: white;
 }
 
 .input-field label {
