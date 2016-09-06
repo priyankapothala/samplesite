@@ -4,7 +4,7 @@
         $('.parallax').parallax();
         $('.slider').slider({ full_width: true, height: 600 });
         $(document).scroll(function(event) {
-            if (event.currentTarget.scrollingElement.scrollTop > 64)
+            if (event.currentTarget.scrollingElement.scrollTop > 0)
                 $("#page-header").addClass('fixed');
             else
                 $("#page-header").removeClass('fixed');

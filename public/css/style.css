@@ -3,7 +3,9 @@
 body {
     font-size: 16px;
 }
-
+.container {
+    max-width: 970px;
+}
 .quick-links {
     position: fixed;
     width: 35px;
@@ -271,14 +273,19 @@ p {
 }
 
 .icon-block {
-    padding: 20px;
-    margin: 12px;
+    padding: 16px;
     transition: box-shadow ease-in-out 0.5s;
 }
 
 .icon-block:hover {
     box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     transition: box-shadow ease-in-out 0.5s;
+}
+
+.img-container {
+    max-width: 300px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 footer.page-footer {
@@ -289,10 +296,12 @@ footer ul li > a,
 .subscribe-container {
     color: #BEBEBE;
 }
+
 .social-icons {
     margin: 16px 0px;
     color: #BEBEBE;
 }
+
 .footer-store-img {
     width: 200px;
 }
