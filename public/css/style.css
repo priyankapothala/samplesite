@@ -3,9 +3,15 @@
 body {
     font-size: 16px;
 }
+
 .container {
     max-width: 1000px;
 }
+
+h5,h4{
+    line-height: 120%;
+}
+
 .quick-links {
     position: fixed;
     width: 35px;
@@ -16,10 +22,12 @@ body {
     overflow: hidden;
     cursor: pointer;
 }
-.row-item + .row-item{
-  padding-top: 30px;
-  border-top:1px solid #d4d4d4;
+
+.row-item + .row-item {
+    padding-top: 30px;
+    border-top: 1px solid #d4d4d4;
 }
+
 .theme-yellow {
     background-color: #F5AA23 !important;
 }
@@ -300,9 +308,22 @@ footer ul li > a,
     color: #BEBEBE;
 }
 
-.social-icons {
-    margin: 16px 0px;
+.subscribe-container .btn {
+    margin: 8px 0px;
+}
+
+footer ul li > a:hover {
+    color: #FFFFFF;
+}
+
+.social-icons > i {
+    margin: 16px 8px 16px 0px;
     color: #BEBEBE;
+    cursor: pointer;
+}
+
+.social-icons > i:hover {
+    color: #FFFFFF;
 }
 
 .footer-store-img {
