@@ -62,7 +62,7 @@ li.main-menu .sub-menu {
     display: none;
     position: absolute;
     min-width: 180px;
-    background: rgba(0, 0, 0, 0.9);
+    background: #272727;
     border-radius: 5px;
     top: 100%;
 }
@@ -124,7 +124,7 @@ i + * {
 }
 
 .brand-logo img {
-    padding: 10px;
+    padding: 10px 0px;
 }
 
 nav#page-header {
@@ -147,7 +147,7 @@ nav#page-header ul a {
 }
 
 .nav-dropdown.dropdown-content {
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: #272727;
     box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
     border-radius: 4px;
 }
@@ -162,8 +162,8 @@ nav#page-header ul a {
 }
 
 nav#page-header.fixed {
-    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
-    background-color: rgba(0, 0, 0, 0.8);
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.45);
+    background-color: #272727;
     -webkit-transition: all 0.5s ease-in-out;
     -moz-transition: all 0.5s ease-in-out;
     -ms-transition: all 0.5s ease-in-out;
