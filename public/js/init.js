@@ -27,10 +27,7 @@ mainApp.config(function($routeProvider, $locationProvider) {
         .when('/hire-va', {
             templateUrl: '../pages/hire-va.html'
         })
-        .when('/page-not-found', {
-            templateUrl: '../pages/404.html'
-        })
-        .otherwise({ redirectTo: '/page-not-found' });
+        .otherwise({ redirectTo: '/' });
     $locationProvider.baseHref = '/';
     $locationProvider.html5Mode({
         enabled: true,

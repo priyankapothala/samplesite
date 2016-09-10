@@ -137,6 +137,7 @@ nav#page-header {
     -ms-transition: all 0.5s ease-in-out;
     -o-transition: all 0.5s ease-in-out;
     z-index: 1000;
+    top: 0;
 }
 
 nav#page-header ul a {
@@ -558,9 +559,6 @@ table tr:not(.table-header) {
 
 .plan-price h3 {
     display: inline-block;
-}
-.page-not-found{
-    min-height: 100vh;
 }
 @media(min-width: 992px) {
     .pricing-chart {
