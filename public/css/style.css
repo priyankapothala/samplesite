@@ -559,7 +559,9 @@ table tr:not(.table-header) {
 .plan-price h3 {
     display: inline-block;
 }
-
+.page-not-found{
+    min-height: 100vh;
+}
 @media(min-width: 992px) {
     .pricing-chart {
         min-height: 360px;

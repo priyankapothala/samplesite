@@ -1,5 +1,44 @@
-(function($) {
-    $(function() {
+var mainApp = angular.module('mainApp', ['ngRoute']);
+mainApp.config(function($routeProvider, $locationProvider) {
+    $routeProvider.when('/', {
+            templateUrl: '../pages/home.html'
+        })
+        .when('/store-setup', {
+            templateUrl: '../pages/store-setup.html'
+        })
+        .when('/contact', {
+            templateUrl: '../pages/contact.html'
+        })
+        .when('/data-entry', {
+            templateUrl: '../pages/contact.html'
+        })
+        .when('/graphic-services', {
+            templateUrl: '../pages/contact.html'
+        })
+        .when('/small-tasks', {
+            templateUrl: '../pages/contact.html'
+        })
+        .when('/free-store-setup', {
+            templateUrl: '../pages/free-store-setup.html'
+        })
+        .when('/app-integrations', {
+            templateUrl: '../pages/app-integrations.html'
+        })
+        .when('/hire-va', {
+            templateUrl: '../pages/hire-va.html'
+        })
+        .when('/page-not-found', {
+            templateUrl: '../pages/404.html'
+        })
+        .otherwise({ redirectTo: '/page-not-found' });
+    $locationProvider.baseHref = '/';
+    $locationProvider.html5Mode({
+        enabled: true,
+    });
+});
+
+mainApp.controller('mainController', function($scope) {
+    $scope.$on('$viewContentLoaded', function() {
         $('.button-collapse').sideNav();
         $('.parallax').parallax();
         $('.slider').slider({ full_width: true, height: 600 });
@@ -16,7 +55,6 @@
         });
         $('select').material_select();
         $('.carousel.carousel-slider').carousel({ full_width: true });
-        //smooth scroll
         $(document).on('click', 'a', function(event) {
             if (event.currentTarget.getAttribute('href').indexOf('#') == -1)
                 return;
@@ -26,4 +64,4 @@
             }, 500);
         });
     });
-})(jQuery);
+});
