@@ -5,10 +5,11 @@ body {
 }
 
 .container {
-    max-width: 1000px;
+    max-width: 975px;
 }
 
-h5,h4{
+h5,
+h4 {
     line-height: 120%;
 }
 
@@ -62,7 +63,7 @@ li.main-menu .sub-menu {
     display: none;
     position: absolute;
     min-width: 180px;
-    background: #272727;
+    background: #404040;
     border-radius: 5px;
     top: 100%;
 }
@@ -147,7 +148,7 @@ nav#page-header ul a {
 }
 
 .nav-dropdown.dropdown-content {
-    background-color: #272727;
+    background-color: #404040;
     box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
     border-radius: 4px;
 }
@@ -163,7 +164,7 @@ nav#page-header ul a {
 
 nav#page-header.fixed {
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.45);
-    background-color: #272727;
+    background-color: #404040;
     -webkit-transition: all 0.5s ease-in-out;
     -moz-transition: all 0.5s ease-in-out;
     -ms-transition: all 0.5s ease-in-out;
@@ -301,6 +302,11 @@ p {
 
 footer.page-footer {
     margin: 0;
+    background: #404040;
+}
+
+footer.page-footer .footer-copyright {
+    background: #212121;
 }
 
 footer ul li > a,
@@ -471,4 +477,107 @@ footer ul li > a:hover {
 
 .input-field .prefix.active {
     color: #F5AA23;
+}
+
+
+/*table styles*/
+
+table {
+    background: #FFFFFF;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2)
+}
+
+.table-header {
+    background: #F5AA23;
+}
+
+td,
+th {
+    text-align: center;
+    border-radius: 0px;
+    position: relative;
+}
+
+.table-header th {
+    padding: 32px 24px;
+}
+
+td {
+    padding: 16px 24px;
+}
+
+table tr:not(.table-header):hover {
+    background: #EEEEEE;
+}
+
+table tr:not(.table-header) {
+    border-bottom: 1px solid #F0F0F0;
+}
+
+.table-header th:after {
+    width: 0;
+    height: 0;
+    content: "";
+    display: block;
+    border-style: solid;
+    border-width: 8px 8px 0 8px;
+    border-color: #F5AA23 transparent transparent transparent;
+    position: absolute;
+    bottom: -8px;
+    left: calc(50% - 10px);
+}
+
+.pricing-chart {
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
+    padding: 20px 40px;
+    position: relative;
+    text-align: center;
+    float: left;
+    width: 100%;
+    margin:10px 0px;
+}
+
+.plan-red {
+    border: 6px solid #f44336;
+}
+
+.plan-green {
+    border: 6px solid #4caf50;
+}
+
+.plan-blue {
+    border: 6px solid #2196f3;
+}
+
+.border-pricing {
+    margin: 12px 0px;
+    height: 2px;
+}
+
+.plan-price h3 {
+    display: inline-block;
+}
+
+@media(min-width: 992px) {
+    .pricing-chart {
+        min-height: 360px;
+        top: 20px;
+        width: 33%;
+        margin:0px;
+    }
+    .plan-red {
+        min-height: 400px;
+        top: 0;
+        z-index: 1;
+    }
+    .plan-green {
+        border: 6px solid #4caf50;
+        left: 30px;
+    }
+    .plan-blue {
+        border: 6px solid #2196f3;
+        left: -30px;
+    }
 }
