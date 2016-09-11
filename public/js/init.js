@@ -10,13 +10,13 @@ mainApp.config(function($routeProvider, $locationProvider) {
             templateUrl: '../pages/contact.html'
         })
         .when('/data-entry', {
-            templateUrl: '../pages/contact.html'
+            templateUrl: '../pages/data-entry.html'
         })
         .when('/graphic-services', {
-            templateUrl: '../pages/contact.html'
+            templateUrl: '../pages/graphic-services.html'
         })
         .when('/small-tasks', {
-            templateUrl: '../pages/contact.html'
+            templateUrl: '../pages/small-tasks.html'
         })
         .when('/free-store-setup', {
             templateUrl: '../pages/free-store-setup.html'
@@ -26,6 +26,15 @@ mainApp.config(function($routeProvider, $locationProvider) {
         })
         .when('/hire-va', {
             templateUrl: '../pages/hire-va.html'
+        })
+        .when('/about-us', {
+            templateUrl: '../pages/about-us.html'
+        })
+        .when('/app-development', {
+            templateUrl: '../pages/app-development.html'
+        })
+        .when('/web-development', {
+            templateUrl: '../pages/web-development.html'
         })
         .otherwise({ redirectTo: '/' });
     $locationProvider.baseHref = '/';
