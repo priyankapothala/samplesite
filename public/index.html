@@ -16,6 +16,7 @@
     <script src="js/angular.min.js"></script>
     <script src="js/angular-route.min.js"></script>
     <script src="js/init.js"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBUDwgGKhxDpeifHW_TyeH3s5os2-bVOqA" type="text/javascript"></script>
 </head>
 
 <body ng-controller="mainController">
@@ -45,7 +46,7 @@
                         <li><a href="#!">GET A QUOTE</a></li>
                     </ul>
                 </li>
-                <li><a href="/about-us">ABOUT US</a></li>
+                <li><a href="/about">ABOUT US</a></li>
                 <li><a href="/contact">CONTACT</a></li>
             </ul>
             <ul id="nav-mobile" class="side-nav">
@@ -67,28 +68,24 @@
                 <div class="col m3 s6">
                     <div class="footer-title white-text">About Gangez</div>
                     <ul>
-                        <li><a href="#!">Our Story</a></li>
-                        <li><a href="#!">Our Team</a></li>
-                        <li><a href="#!">Blog</a></li>
-                        <li><a href="#!">Careers</a></li>
-                        <li><a href="#!">Contact Us</a></li>
+                        <li><a href="/about">Our Story</a></li>
+                        <li><a href="/about">Our Team</a></li>
+                        <li><a href="/contact">Contact Us</a></li>
                     </ul>
                 </div>
                 <div class="col m3 s6">
                     <div class="footer-title white-text">Quick Links</div>
                     <ul>
-                        <li><a href="free-store-setup.html">Free Store Setup*</a></li>
-                        <li><a href="#!">Hire a VA or Team</a></li>
-                        <li><a href="#!">Pricing</a></li>
-                        <li><a href="#!">Get A Qoute</a></li>
-                        <li><a href="#!">Privacy Policy</a></li>
+                        <li><a href="/free-store-setup">Free Store Setup*</a></li>
+                        <li><a href="/hire-va">Hire a VA or Team</a></li>
+                        <li><a href="#!">Get A Quote</a></li>
                     </ul>
                 </div>
                 <div class="col m3 s12 hide-on-med-and-down">
                     <div class="footer-title white-text">Open A Free Store</div>
                     <ul>
                         <li>
-                            <a href="free-store-setup.html">
+                            <a href="/free-store-setup">
                                 <img class="responsive-img footer-store-img" src="images/free-store.jpg">
                             </a>
                         </li>

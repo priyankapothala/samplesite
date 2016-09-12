@@ -7,7 +7,8 @@ mainApp.config(function($routeProvider, $locationProvider) {
             templateUrl: '../pages/store-setup.html'
         })
         .when('/contact', {
-            templateUrl: '../pages/contact.html'
+            templateUrl: '../pages/contact.html',
+            controller: 'contactController'
         })
         .when('/data-entry', {
             templateUrl: '../pages/data-entry.html'
@@ -27,7 +28,7 @@ mainApp.config(function($routeProvider, $locationProvider) {
         .when('/hire-va', {
             templateUrl: '../pages/hire-va.html'
         })
-        .when('/about-us', {
+        .when('/about', {
             templateUrl: '../pages/about-us.html'
         })
         .when('/app-development', {
@@ -42,7 +43,32 @@ mainApp.config(function($routeProvider, $locationProvider) {
         enabled: true,
     });
 });
+mainApp.controller('contactController', function($scope) {
+    var branches = [
+        ['Hyderabad', 17.491824, 78.393659, 1]
+    ];
 
+    $scope.initMap = function() {
+        $scope.map = new google.maps.Map(document.getElementById('map'), {
+            zoom: 10,
+            center: { lat: 17.491824, lng: 78.393659 }
+        });
+        $scope.setMarkers(map);
+    }
+
+    $scope.setMarkers = function(map) {
+        for (var i = 0; i < branches.length; i++) {
+            var branch = branches[i];
+            var marker = new google.maps.Marker({
+                position: { lat: branch[1], lng: branch[2] },
+                map: $scope.map,
+                title: branch[0],
+                zIndex: branch[3]
+            });
+        }
+    }
+    $scope.initMap();
+});
 mainApp.controller('mainController', function($scope) {
     $scope.$on('$viewContentLoaded', function() {
         $('.button-collapse').sideNav();
