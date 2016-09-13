@@ -49,18 +49,45 @@
                 <li><a href="/about">ABOUT US</a></li>
                 <li><a href="/contact">CONTACT</a></li>
             </ul>
-            <ul id="nav-mobile" class="side-nav">
-                <li><a href="index.html">HOME</a></li>
-                <li><a href="#">SHOPIFY SERVICES</a></li>
-                <li><a href="#">E-COMMERCE SERVICES</a></li>
-                <li><a href="#">PRICING</a></li>
-                <li><a href="#">MORE</a></li>
-                <li><a href="#">CONTACT</a></li>
+            <ul class="side-nav" id="nav-mobile">
+                <ul class="collapsible" data-collapsible="accordion">
+                    <li class="bold">
+                        <a href="/">HOME</a>
+                    </li>
+                    <li>
+                        <div class="collapsible-header bold"><a href="#">SHOPIFY SERVICES</a></div>
+                        <div class="collapsible-body">
+                            <ul>
+                                <li><a href="/free-store-setup">FREE STORE SETUP*</a></li>
+                                <li><a href="/data-entry">ADDING PRODUCTS</a></li>
+                                <li><a href="/graphic-services">GRAPHIC SERVICES</a></li>
+                                <li><a href="/app-integrations">APP INTEGRATIONS</a></li>
+                                <li><a href="/small-tasks">SMALL TASKS</a></li>
+                                <li><a href="/hire-va">HIRE A VA/TEAM</a></li>
+                                <li><a href="#!">CUSTOMER SUPPORT</a></li>
+                                <li><a href="#!">GET A QUOTE</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="collapsible-header bold"><a href="#">E-COMMERCE SERVICES</a></div>
+                        <div class="collapsible-body">
+                            <ul>
+                                <li><a href="/store-setup">ONLINE STORE SETUP</a></li>
+                                <li><a href="/app-development">APP DEVELOPMENT</a></li>
+                                <li><a href="/web-development">WEB DEVELOPMENT</a></li>
+                                <li><a href="#!">GET A QUOTE</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="bold"><a href="/about">ABOUT US</a></li>
+                    <li class="bold"><a href="/contact">CONTACT</a></li>
+                </ul>
             </ul>
         </div>
     </nav>
     <div id="main">
-        <div ng-view></div>
+        <div ng-view autoscroll="true"></div>
     </div>
     <footer class="page-footer grey darken-2">
         <div class="container">

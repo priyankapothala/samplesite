@@ -125,7 +125,7 @@ i + * {
 }
 
 .brand-logo img {
-    padding: 10px 0px;
+    padding: 8px 0px;
 }
 
 nav#page-header {
@@ -144,8 +144,17 @@ nav#page-header ul a {
     color: #FFFFFF;
 }
 
-.side-nav li > a {
+.side-nav li a {
     color: #212121 !important;
+}
+
+.side-nav a:hover {
+    background-color: transparent !important;
+}
+
+.side-nav .collapsible-header,
+.side-nav.fixed .collapsible-header {
+    padding: 0px !important;
 }
 
 .nav-dropdown.dropdown-content {
@@ -193,8 +202,8 @@ nav#page-header.fixed {
 }
 
 .pricing-content {
-    background: rgba(0, 0, 0, 0.8);
-    color: #FFF;
+    background: #F5F5F5;
+    color: black;
     height: 100%;
     padding: 16px;
 }
