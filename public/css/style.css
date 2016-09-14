@@ -152,11 +152,6 @@ nav#page-header ul a {
     background-color: transparent !important;
 }
 
-.side-nav .collapsible-header,
-.side-nav.fixed .collapsible-header {
-    padding: 0px !important;
-}
-
 .nav-dropdown.dropdown-content {
     background-color: #404040;
     box-shadow: 0 6px 12px rgba(0, 0, 0, .175);

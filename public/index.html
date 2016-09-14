@@ -2,8 +2,9 @@
 <html lang="en" ng-app="mainApp">
 
 <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <base href="/" />
     <title>Gangez</title>
     <!-- CSS  -->
@@ -17,6 +18,20 @@
     <script src="js/angular-route.min.js"></script>
     <script src="js/init.js"></script>
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBUDwgGKhxDpeifHW_TyeH3s5os2-bVOqA" type="text/javascript"></script>
+    <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script>
+    <script type='text/javascript'>
+    (function($) {
+        window.fnames = new Array();
+        window.ftypes = new Array();
+        fnames[0] = 'EMAIL';
+        ftypes[0] = 'email';
+        fnames[1] = 'FNAME';
+        ftypes[1] = 'text';
+        fnames[2] = 'LNAME';
+        ftypes[2] = 'text';
+    }(jQuery));
+    var $mcj = jQuery.noConflict(true);
+    </script>
 </head>
 
 <body ng-controller="mainController">
@@ -50,39 +65,43 @@
                 <li><a href="/contact">CONTACT</a></li>
             </ul>
             <ul class="side-nav" id="nav-mobile">
-                <ul class="collapsible" data-collapsible="accordion">
-                    <li class="bold">
-                        <a href="/">HOME</a>
-                    </li>
-                    <li>
-                        <div class="collapsible-header bold"><a href="#">SHOPIFY SERVICES</a></div>
-                        <div class="collapsible-body">
-                            <ul>
-                                <li><a href="/free-store-setup">FREE STORE SETUP*</a></li>
-                                <li><a href="/data-entry">ADDING PRODUCTS</a></li>
-                                <li><a href="/graphic-services">GRAPHIC SERVICES</a></li>
-                                <li><a href="/app-integrations">APP INTEGRATIONS</a></li>
-                                <li><a href="/small-tasks">SMALL TASKS</a></li>
-                                <li><a href="/hire-va">HIRE A VA/TEAM</a></li>
-                                <li><a href="#!">CUSTOMER SUPPORT</a></li>
-                                <li><a href="#!">GET A QUOTE</a></li>
-                            </ul>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="collapsible-header bold"><a href="#">E-COMMERCE SERVICES</a></div>
-                        <div class="collapsible-body">
-                            <ul>
-                                <li><a href="/store-setup">ONLINE STORE SETUP</a></li>
-                                <li><a href="/app-development">APP DEVELOPMENT</a></li>
-                                <li><a href="/web-development">WEB DEVELOPMENT</a></li>
-                                <li><a href="#!">GET A QUOTE</a></li>
-                            </ul>
-                        </div>
-                    </li>
-                    <li class="bold"><a href="/about">ABOUT US</a></li>
-                    <li class="bold"><a href="/contact">CONTACT</a></li>
-                </ul>
+                <li><a href="/">HOME</a></li>
+                <li class="no-padding">
+                    <ul class="collapsible collapsible-accordion">
+                        <li>
+                            <a class="collapsible-header">SHOPIFY SERVICES</a>
+                            <div class="collapsible-body">
+                                <ul>
+                                    <li><a href="/free-store-setup">FREE STORE SETUP*</a></li>
+                                    <li><a href="/data-entry">ADDING PRODUCTS</a></li>
+                                    <li><a href="/graphic-services">GRAPHIC SERVICES</a></li>
+                                    <li><a href="/app-integrations">APP INTEGRATIONS</a></li>
+                                    <li><a href="/small-tasks">SMALL TASKS</a></li>
+                                    <li><a href="/hire-va">HIRE A VA/TEAM</a></li>
+                                    <li><a href="#!">CUSTOMER SUPPORT</a></li>
+                                    <li><a href="#!">GET A QUOTE</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+                <li class="no-padding">
+                    <ul class="collapsible collapsible-accordion">
+                        <li>
+                            <a class="collapsible-header">E-COMMERCE SERVICES</a>
+                            <div class="collapsible-body">
+                                <ul>
+                                    <li><a href="/store-setup">ONLINE STORE SETUP</a></li>
+                                    <li><a href="/app-development">APP DEVELOPMENT</a></li>
+                                    <li><a href="/web-development">WEB DEVELOPMENT</a></li>
+                                    <li><a href="#!">GET A QUOTE</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+                <li><a href="/about">ABOUT US</a></li>
+                <li><a href="/contact">CONTACT</a></li>
             </ul>
         </div>
     </nav>
@@ -127,12 +146,26 @@
                         <i class="fa fa-google-plus fa-lg" aria-hidden="true"></i>
                     </div>
                     <div>
-                        <div>Stay Updated</div>
-                        <div class="input-field">
-                            <input id="email" type="email" class="validate">
-                            <label for="email">Enter your email address</label>
-                        </div>
-                        <a href="#" class="btn waves-effect waves-light grey-text text-darken-4 theme-yellow">SUBSCRIBE</a>
+                        
+                        <form action="//inkedcreatively.us9.list-manage.com/subscribe/post?u=1b9602e200657160c01f5c06e&amp;id=175250e2f5" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+                                <div>Stay Updated</div>
+                                <div class="input-field">
+                                    <label for="mce-EMAIL">Email Address <span class="asterisk">*</span>
+                                    </label>
+                                    <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL">
+                                </div>
+                                <div id="mce-responses" class="clear">
+                                    <div class="response" id="mce-error-response" style="display:none"></div>
+                                    <div class="response" id="mce-success-response" style="display:none"></div>
+                                </div>
+                                <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                                <div style="position: absolute; left: -5000px;" aria-hidden="true">
+                                    <input type="text" name="b_1b9602e200657160c01f5c06e_175250e2f5" tabindex="-1" value="">
+                                </div>
+                                <div class="clear">
+                                    <input type="submit" class="btn waves-effect waves-light grey-text text-darken-4 theme-yellow" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button">
+                                </div>
+                        </form>
                     </div>
                 </div>
             </div>

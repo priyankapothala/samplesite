@@ -1,5 +1,5 @@
 var mainApp = angular.module('mainApp', ['ngRoute']);
-mainApp.config(function($routeProvider, $locationProvider) {
+mainApp.config(function($routeProvider, $locationProvider, $httpProvider) {
     $routeProvider.when('/', {
             templateUrl: '../pages/home.html'
         })
@@ -69,9 +69,26 @@ mainApp.controller('contactController', function($scope) {
     }
     $scope.initMap();
 });
-mainApp.controller('mainController', function($scope) {
+mainApp.service('emailService', function($http, $q) {
+   $http.defaults.headers.common['x-api-key']='5A557875A2AAF2EAF080C22C1C274886';
+    //$http.defaults.headers.common['x-requested-with']=true;
+    this.postCall = function(url, data) {
+        var tempdata = angular.copy(data);
+        var deferred = $q.defer();
+        $http.post(url, tempdata).success(function(response) {
+            deferred.resolve(response);
+        }).error(function(err) {
+            deferred.reject(err);
+            console.log(err);
+        });
+        return deferred.promise;
+    }
+});
+mainApp.controller('mainController', function($scope, emailService) {
     $scope.$on('$viewContentLoaded', function() {
-        $('.button-collapse').sideNav();
+        $('.button-collapse').sideNav({
+            closeOnClick: true
+        });
         $('.parallax').parallax();
         $('.slider').slider({ full_width: true, height: 600 });
         $(document).scroll(function(event) {
@@ -88,12 +105,35 @@ mainApp.controller('mainController', function($scope) {
         $('select').material_select();
         $('.carousel.carousel-slider').carousel({ full_width: true });
         $(document).on('click', 'a', function(event) {
+            if (!event.currentTarget.getAttribute('href'))
+                return;
             if (event.currentTarget.getAttribute('href').indexOf('#') == -1)
                 return;
             event.preventDefault();
             $('html, body').animate({
-                scrollTop: $($.attr(this, 'href')).offset().top - 100
+                scrollTop: $($.attr(this, 'href')).offset().top
             }, 500);
         });
     });
+
+    $scope.postTicket = function() {
+        var data = {
+            "alert": true,
+            "autorespond": true,
+            "source": "API",
+            "name": "Angry User",
+            "email": "api@osticket.com",
+            "phone": "3185558634X123",
+            "subject": "Testing API",
+            "ip": "123.211.233.122",
+            "message": "MESSAGE HERE"
+        }
+        var data="";
+        emailService.postCall('http://www.support.gangez.in/api/tickets.json', data).
+        then(function(data) {
+            console.log(data);
+        }, function(err) {
+            console.log(err);
+        })
+    }
 });
