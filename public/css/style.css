@@ -307,7 +307,7 @@ p {
 
 footer.page-footer {
     margin: 0;
-    background: #404040;
+    background: #212121;
 }
 
 footer.page-footer .footer-copyright {
@@ -418,16 +418,20 @@ footer ul li > a:hover {
     color: #000;
 }
 
-
 /* label focus color */
 
 .input-field input,
 .input-field textarea {
     border-bottom: 1px solid #E5E5E5;
+    outline: none;
 }
 
 .input-field {
     color: #727272;
+}
+
+footer.page-footer .input-field {
+    color: #FFFFFF !important;
 }
 
 .input-field input:focus + label {
