@@ -205,36 +205,36 @@
             <h5 class="light">We work with awesome clients</h5>
         </div>
         <div class="row">
-            <form class="col s12">
+            <form class="col s12 contact-form" method="post" action="http://www.gangez.org/contact.php">
                 <div class="row">
                     <div class="input-field col s12 m6">
                         <i class="fa fa-user prefix" aria-hidden="true"></i>
-                        <input id="name" type="text" class="validate">
+                        <input id="name" type="text" name="name" class="validate">
                         <label for="name">Name</label>
                     </div>
                     <div class="input-field col s12 m6">
                         <i class="fa fa-envelope prefix" aria-hidden="true"></i>
-                        <input id="email" type="email" class="validate">
+                        <input id="email" type="email" name="email" class="validate">
                         <label for="email">Email Address</label>
                     </div>
                     <div class="input-field col s12 m6">
                         <i class="fa fa-phone prefix" aria-hidden="true"></i>
-                        <input id="phone" type="text" class="validate">
+                        <input id="phone" type="text" class="validate" name="phone">
                         <label for="phone">Phone</label>
                     </div>
                     <div class="input-field col s12 m6">
                         <i class="fa fa-globe prefix" aria-hidden="true"></i>
-                        <input id="weburl" type="text" class="validate">
+                        <input id="weburl" type="text" class="validate" name="weburl">
                         <label for="weburl">Website URL</label>
                     </div>
                     <div class="input-field col s12">
                         <i class="fa fa-comment prefix" aria-hidden="true"></i>
-                        <textarea id="textarea1" length="500" class="materialize-textarea"></textarea>
+                        <textarea id="textarea1" length="500" class="materialize-textarea" name="comments"></textarea>
                         <label for="textarea1">Message</label>
                     </div>
                 </div>
                 <div class="row center">
-                    <a ng-click="postTicket()" class="btn waves-effect waves-light grey-text text-darken-4 theme-yellow">SUBMIT</a>
+                    <input type="submit" value="SUBMIT" name="submit" class="btn waves-effect waves-light grey-text text-darken-4 theme-yellow">
                 </div>
             </form>
         </div>

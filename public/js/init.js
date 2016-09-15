@@ -69,22 +69,7 @@ mainApp.controller('contactController', function($scope) {
     }
     $scope.initMap();
 });
-mainApp.service('emailService', function($http, $q) {
-   $http.defaults.headers.common['x-api-key']='5A557875A2AAF2EAF080C22C1C274886';
-    //$http.defaults.headers.common['x-requested-with']=true;
-    this.postCall = function(url, data) {
-        var tempdata = angular.copy(data);
-        var deferred = $q.defer();
-        $http.post(url, tempdata).success(function(response) {
-            deferred.resolve(response);
-        }).error(function(err) {
-            deferred.reject(err);
-            console.log(err);
-        });
-        return deferred.promise;
-    }
-});
-mainApp.controller('mainController', function($scope, emailService) {
+mainApp.controller('mainController', function($scope) {
     $scope.$on('$viewContentLoaded', function() {
         $('.button-collapse').sideNav({
             closeOnClick: true
@@ -114,26 +99,34 @@ mainApp.controller('mainController', function($scope, emailService) {
                 scrollTop: $($.attr(this, 'href')).offset().top
             }, 500);
         });
-    });
 
-    $scope.postTicket = function() {
-        var data = {
-            "alert": true,
-            "autorespond": true,
-            "source": "API",
-            "name": "Angry User",
-            "email": "api@osticket.com",
-            "phone": "3185558634X123",
-            "subject": "Testing API",
-            "ip": "123.211.233.122",
-            "message": "MESSAGE HERE"
-        }
-        var data="";
-        emailService.postCall('http://www.support.gangez.in/api/tickets.json', data).
-        then(function(data) {
-            console.log(data);
-        }, function(err) {
-            console.log(err);
-        })
-    }
+        $(".contact-form").submit(function(e) {
+            e.preventDefault();
+            var $form = $(this);
+            var action = $form.attr("action");
+            var post_data = new FormData(this);
+            $.ajax({
+                url: action,
+                type: "POST",
+                data: post_data,
+                processData: false,
+                contentType: false,
+                success: function(success_data) {
+                    if (success_data.result == true) {
+                        $form.find(".form-success").slideDown();
+                        $('html,body').animate({
+                            scrollTop: $form.find(".form-success").offset().top - 70
+                        }, 1000);
+                        $form.find(".form-error").slideUp();
+                    } else {
+                        $form.find(".form-success").slideUp();
+                        $form.find(".form-error").slideDown();
+                        $form.find(".form-error .needed-fields").html("<ul><li>" + success_data.messages.join("</li><li>") + "</li></ul>");
+                    }
+                },
+                dataType: "json"
+            });
+            //return false;
+        });
+    });
 });
