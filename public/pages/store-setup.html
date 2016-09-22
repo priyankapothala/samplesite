@@ -4,7 +4,7 @@
             <div class="row center white-text">
                 <h3 class="header-title">E-COMMERCE STORE SETUP</h3>
                 <h4 class="light">We know how to make you a leading web retailer</h4>
-                <a href="services.html" class="btn waves-effect waves-light theme-yellow grey-text text-darken-4">GET STARTED TODAY</a>
+                <a href="#contactForm" class="btn waves-effect waves-light theme-yellow grey-text text-darken-4">GET STARTED TODAY</a>
             </div>
         </div>
     </div>
@@ -27,7 +27,7 @@
             <div class="col s12 m6 text-cont">
                 <div class="white">
                     <h5>WHY E-COMMERCE STORE SETUP</h5>
-                    <p class="light">A strong online presence is crucial for expanding you clientele and which span far beyond the confines of your locality.</p>
+                    <p class="light">A strong online presence is crucial for expanding your clientele and which span far beyond the confines of your locality.</p>
                 </div>
             </div>
         </div>
@@ -51,61 +51,64 @@
             <div class="col s12 m6 pull-m6">
                 <p>Our specialized services include:</p>
                 <ul>
-                    <li><i class="fa fa-check" aria-hidden="true"></i><span>Setting up your business's online platform</span></li>
-                    <li><i class="fa fa-check" aria-hidden="true"></i><span>Incorporating fully functional e-commerce features</span></li>
-                    <li><i class="fa fa-check" aria-hidden="true"></i><span>Setting up your products</span></li>
-                    <li><i class="fa fa-check" aria-hidden="true"></i><span>Advanced transaction adn domain security</span></li>
-                    <li><i class="fa fa-check" aria-hidden="true"></i><span>Designated payment gateway options and many more...</span></li>
+                    <li><i class="fa fa-check theme-yellow-text" aria-hidden="true"></i><span>Setting up your business's online platform.</span></li>
+                    <li><i class="fa fa-check theme-yellow-text" aria-hidden="true"></i><span>Incorporating fully functional e-commerce features.</span></li>
+                    <li><i class="fa fa-check theme-yellow-text" aria-hidden="true"></i><span>Setting up your products.</span></li>
+                    <li><i class="fa fa-check theme-yellow-text" aria-hidden="true"></i><span>Advanced transaction and domain security.</span></li>
+                    <li><i class="fa fa-check theme-yellow-text" aria-hidden="true"></i><span>Designated payment gateway options and many more...</span></li>
                 </ul>
             </div>
         </div>
         <div class="row">
-            <p>We pay painstaking attention to details, highlighting the presentation of yout products' best features and help you gain returning customers through making using yout site a hassle-free experience.</p>
-            <p>Trusting Gangez eCommerce ecperts is a surefire way to success - and we're here to prove it.</p>
+            <p>We pay painstaking attention to details, highlighting the presentation of your products' best features and help you gain returning customers through making using your site a hassle-free experience.</p>
+            <p>Trusting Gangez eCommerce experts is a surefire way to success - and we're here to prove it.</p>
         </div>
     </div>
 </div>
 <div class="section theme-yellow">
     <div class="container">
         <div class="row center">
-            <h5 class="header-title">Don't deny your chance to become a leading web merchant in yout field</h5>
-            <p class="light">Contact us, today & start your journey towards e-Commerce domination! We will get back tou you ASAP.</p>
+            <h5 class="header-title">Don't deny your chance to become a leading web merchant in your field</h5>
+            <p class="light">Contact us, today & start your journey towards e-Commerce domination! We will get back to you ASAP.</p>
         </div>
     </div>
 </div>
-<div class="container">
+<div class="container" id="contactForm">
     <div class="section">
+        <div class="row center">
+            <h5 class="light">Send us your request today</h5>
+        </div>
         <div class="row">
-            <form class="col s12">
+            <form class="col s12 contact-form" method="post" action="/contact.php?page=quote">
                 <div class="row">
                     <div class="input-field col s12 m6">
                         <i class="fa fa-user prefix" aria-hidden="true"></i>
-                        <input id="name" type="text" class="validate">
-                        <label for="name">Name</label>
+                        <input id="name" type="text" class="validate" name="name" required>
+                        <label for="name">Name *</label>
                     </div>
                     <div class="input-field col s12 m6">
                         <i class="fa fa-university prefix" aria-hidden="true"></i>
-                        <input id="businessName" type="text" class="validate">
-                        <label for="businessName">Business Name</label>
+                        <input id="businessName" type="text" class="validate" name="business_name" required>
+                        <label for="businessName">Business Name *</label>
                     </div>
                     <div class="input-field col s12 m6">
                         <i class="fa fa-envelope prefix" aria-hidden="true"></i>
-                        <input id="email" type="email" class="validate">
-                        <label for="email">Email Address</label>
+                        <input id="email" type="email" name="email" class="validate" required>
+                        <label for="email" data-error="Enter a valid email address">Email Address *</label>
                     </div>
                     <div class="input-field col s12 m6">
                         <i class="fa fa-phone prefix" aria-hidden="true"></i>
-                        <input id="phone" type="text" class="validate">
+                        <input id="phone" type="text" class="validate" name="phone" required>
                         <label for="phone">Phone</label>
                     </div>
                     <div class="input-field col s12 m6">
                         <i class="fa fa-globe prefix" aria-hidden="true"></i>
-                        <input id="weburl" type="text" class="validate">
+                        <input id="weburl" type="text" class="validate" name="weburl">
                         <label for="weburl">Website URL</label>
                     </div>
                     <div class="input-field col s12 m6">
                         <i class="fa fa-calendar prefix" aria-hidden="true"></i>
-                        <input type="date" class="datepicker" id="project_date">
+                        <input type="date" class="datepicker" id="project_date" name="duedate">
                         <label for="project_date">Project Due Date (if applicable)</label>
                     </div>
                     <div class="input-field col s12 m6">
@@ -121,12 +124,18 @@
                     </div>
                     <div class="input-field col s12">
                         <i class="fa fa-comment prefix" aria-hidden="true"></i>
-                        <textarea id="textarea1" class="materialize-textarea" length="500"></textarea>
-                        <label for="textarea1">Describe what services your require</label>
+                        <textarea name="services" id="textarea1" class="materialize-textarea" length="1000" required></textarea>
+                        <label for="textarea1">Describe what services you require *</label>
+                    </div>
+                    <div class="form-error col s12 red-text">
+                        <div>There was a problem submitting your request, please try again.
+                            <br>Please enter the following fields</div>
+                        <div class="error-msg">
+                        </div>
                     </div>
                 </div>
                 <div class="row center">
-                    <a href="#" class="btn waves-effect waves-light grey-text text-darken-4 theme-yellow">GET QUOTE</a>
+                    <input type="submit" value="GET QUOTE" name="submit" class="btn waves-effect waves-light grey-text text-darken-4 theme-yellow">
                 </div>
             </form>
         </div>

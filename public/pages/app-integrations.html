@@ -36,19 +36,24 @@
                     <br> Choose from a wide variety of <b>Marketing, Sales and Social Apps</b>, or let us advise you on the right add-ons for your specific requirements.</p>
             </div>
         </div>
-        <div class="row">
-            <div class="col s12">
+        <div class="row row-item">
+            <div class="col s12 m6 push-m6">
+                <div class="img-appint">
+                    <img class="responsive-img" src="images/app_int.png">
+                </div>
+            </div>
+            <div class="col s12 m6 pull-m6">
                 <p><b>Whether you are looking to</b></p>
                 <ul class="custom-list">
-                    <li><i class="fa fa-check" aria-hidden="true"></i><span>Attract new visitors</span></li>
-                    <li><i class="fa fa-check" aria-hidden="true"></i><span>Keep your existing customers coming back for more</span></li>
-                    <li><i class="fa fa-check" aria-hidden="true"></i><span>Promote your products</span></li>
-                    <li><i class="fa fa-check" aria-hidden="true"></i><span>Manage your SEO</span></li>
-                    <li><i class="fa fa-check" aria-hidden="true"></i><span>Increase your website traffic</span></li>
-                    <li><i class="fa fa-check" aria-hidden="true"></i><span>Boost your sales</span></li>
-                    <li><i class="fa fa-check" aria-hidden="true"></i><span>Increase your revenue per order</span></li>
-                    <li><i class="fa fa-check" aria-hidden="true"></i><span>Grow your social presence</span></li>
-                    <li><i class="fa fa-check" aria-hidden="true"></i><span>Promote your store on Facebook, Twitter and other social media</span></li>
+                    <li><i class="fa fa-check theme-yellow-text" aria-hidden="true"></i><span>Attract new visitors</span></li>
+                    <li><i class="fa fa-check theme-yellow-text" aria-hidden="true"></i><span>Keep your existing customers coming back for more</span></li>
+                    <li><i class="fa fa-check theme-yellow-text" aria-hidden="true"></i><span>Promote your products</span></li>
+                    <li><i class="fa fa-check theme-yellow-text" aria-hidden="true"></i><span>Manage your SEO</span></li>
+                    <li><i class="fa fa-check theme-yellow-text" aria-hidden="true"></i><span>Increase your website traffic</span></li>
+                    <li><i class="fa fa-check theme-yellow-text" aria-hidden="true"></i><span>Boost your sales</span></li>
+                    <li><i class="fa fa-check theme-yellow-text" aria-hidden="true"></i><span>Increase your revenue per order</span></li>
+                    <li><i class="fa fa-check theme-yellow-text" aria-hidden="true"></i><span>Grow your social presence</span></li>
+                    <li><i class="fa fa-check theme-yellow-text" aria-hidden="true"></i><span>Promote your store on Facebook, Twitter and other social media</span></li>
                 </ul>
                 <p>We offer the right solution for your business</p>
             </div>
@@ -58,58 +63,72 @@
 <div class="container" id="contactForm">
     <div class="section">
         <div class="row center">
-            <h5 class="light">Send us your request today</h5>
+            <h5>Send us your request today</h5>
         </div>
         <div class="row">
-            <form class="col s12">
+            <form class="col s12 contact-form" method="post" action="/contact.php?page=quote">
                 <div class="row">
                     <div class="input-field col s12 m6">
                         <i class="fa fa-user prefix" aria-hidden="true"></i>
-                        <input id="name" type="text" class="validate">
-                        <label for="name">Name</label>
+                        <input id="name" type="text" class="validate" name="name" required>
+                        <label for="name">Name *</label>
                     </div>
                     <div class="input-field col s12 m6">
                         <i class="fa fa-university prefix" aria-hidden="true"></i>
-                        <input id="businessName" type="text" class="validate">
-                        <label for="businessName">Business Name</label>
+                        <input id="businessName" type="text" class="validate" name="business_name" required>
+                        <label for="businessName">Business Name *</label>
                     </div>
                     <div class="input-field col s12 m6">
                         <i class="fa fa-envelope prefix" aria-hidden="true"></i>
-                        <input id="email" type="email" class="validate">
-                        <label for="email">Email Address</label>
+                        <input id="email" type="email" name="email" class="validate" required>
+                        <label for="email" data-error="Enter a valid email address">Email Address *</label>
                     </div>
                     <div class="input-field col s12 m6">
                         <i class="fa fa-phone prefix" aria-hidden="true"></i>
-                        <input id="phone" type="text" class="validate">
+                        <input id="phone" type="text" class="validate" name="phone" required>
                         <label for="phone">Phone</label>
                     </div>
                     <div class="input-field col s12 m6">
                         <i class="fa fa-globe prefix" aria-hidden="true"></i>
-                        <input id="weburl" type="text" class="validate">
+                        <input id="weburl" type="text" class="validate" name="weburl">
                         <label for="weburl">Website URL</label>
                     </div>
                     <div class="input-field col s12 m6">
                         <i class="fa fa-calendar prefix" aria-hidden="true"></i>
-                        <input type="date" class="datepicker" id="project_date">
+                        <input type="date" class="datepicker" id="project_date" name="duedate">
                         <label for="project_date">Project Due Date (if applicable)</label>
                     </div>
                     <div class="input-field col s12 m6">
-                        <i class="fa fa-dollar prefix" aria-hidden="true"></i>
-                        <select>
+                        <i class="fa fa-bars prefix" aria-hidden="true"></i>
+                        <select name="package">
                             <option value="" disabled selected>Choose your option</option>
-                            <option value="Basic">Basic</option>
-                            <option value="Complete">Complete</option>
+                            <option value="Marketing">Marketing</option>
+                            <option value="Sales">Sales</option>
+                            <option value="Social Media">Social Media</option>
+                            <option value="Shipping">Shipping</option>
+                            <option value="Inventory">Inventory</option>
+                            <option value="Customer Service">Customer Service</option>
+                            <option value="Accounting">Accounting</option>
+                            <option value="Reporting>Reporting</option>
+                            <option value="Tools">Tools</option>
+                            <option value="Sales Channels">Sales Channels</option>
                         </select>
-                        <label>Package Selected</label>
+                        <label>Shopify App category *</label>
                     </div>
                     <div class="input-field col s12">
                         <i class="fa fa-comment prefix" aria-hidden="true"></i>
-                        <textarea id="textarea1" class="materialize-textarea" length="500"></textarea>
-                        <label for="textarea1">Describe what services your require</label>
+                        <textarea name="services" id="textarea1" class="materialize-textarea" length="1000" required></textarea>
+                        <label for="textarea1">Describe what services you require *</label>
+                    </div>
+                    <div class="form-error col s12 red-text">
+                        <div>There was a problem submitting your request, please try again.
+                            <br>Please enter the following fields</div>
+                        <div class="error-msg">
+                        </div>
                     </div>
                 </div>
                 <div class="row center">
-                    <a href="#" class="btn waves-effect waves-light grey-text text-darken-4 theme-yellow">GET QUOTE</a>
+                    <input type="submit" value="GET QUOTE" name="submit" class="btn waves-effect waves-light grey-text text-darken-4 theme-yellow">
                 </div>
             </form>
         </div>

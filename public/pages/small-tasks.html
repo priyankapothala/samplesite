@@ -32,20 +32,25 @@
                     <br>A small task is any web page design, development or app support related job that usually takes less than an hour to complete.</p>
             </div>
         </div>
-        <div class="row">
-            <div class="col s12">
+        <div class="row row-item">
+            <div class="col s12 m6 push-m6">
+                <div class="img-container">
+                    <img class="responsive-img" src="images/small_task.png">
+                </div>
+            </div>
+            <div class="col s12 m6 pull-m6">
                 <p><b>A few examples of small tasks that we can gladly do for you are:</b></p>
                 <ul class="custom-list">
-                    <li><i class="fa fa-check" aria-hidden="true"></i><span>Real time updates of your product prices</span></li>
-                    <li><i class="fa fa-check" aria-hidden="true"></i><span>Addition of discounts, coupons and freebies</span></li>
-                    <li><i class="fa fa-check" aria-hidden="true"></i><span>HTML changes </span></li>
-                    <li><i class="fa fa-check" aria-hidden="true"></i><span>Design, style and CSS adjustments</span></li>
-                    <li><i class="fa fa-check" aria-hidden="true"></i><span>App support and modifications</span></li>
-                    <li><i class="fa fa-check" aria-hidden="true"></i><span>Theme layout improvements</span></li>
-                    <li><i class="fa fa-check" aria-hidden="true"></i><span>Visual theme customizations</span></li>
-                    <li><i class="fa fa-check" aria-hidden="true"></i><span>JavaScript changes</span></li>
-                    <li><i class="fa fa-check" aria-hidden="true"></i><span>Billing, payout and payment questions</span></li>
-                    <li><i class="fa fa-check" aria-hidden="true"></i><span>Social media pictures and more…</span></li>
+                    <li><i class="fa fa-check theme-yellow-text" aria-hidden="true"></i><span>Real time updates of your product prices</span></li>
+                    <li><i class="fa fa-check theme-yellow-text" aria-hidden="true"></i><span>Addition of discounts, coupons and freebies</span></li>
+                    <li><i class="fa fa-check theme-yellow-text" aria-hidden="true"></i><span>HTML changes </span></li>
+                    <li><i class="fa fa-check theme-yellow-text" aria-hidden="true"></i><span>Design, style and CSS adjustments</span></li>
+                    <li><i class="fa fa-check theme-yellow-text" aria-hidden="true"></i><span>App support and modifications</span></li>
+                    <li><i class="fa fa-check theme-yellow-text" aria-hidden="true"></i><span>Theme layout improvements</span></li>
+                    <li><i class="fa fa-check theme-yellow-text" aria-hidden="true"></i><span>Visual theme customization</span></li>
+                    <li><i class="fa fa-check theme-yellow-text" aria-hidden="true"></i><span>JavaScript changes</span></li>
+                    <li><i class="fa fa-check theme-yellow-text" aria-hidden="true"></i><span>Billing, payout and payment questions</span></li>
+                    <li><i class="fa fa-check theme-yellow-text" aria-hidden="true"></i><span>Social media pictures and more…</span></li>
                 </ul>
             </div>
         </div>
@@ -59,38 +64,43 @@
     </div>
 </div>
 <div class="section">
+    <div class="container flex-container">
+        <div class="pricing-chart flex-container">
+            <div class="plan-pricing center">
+                <div class="plan-name">Single Task</div>
+                <div class="plan-price"><span>$</span>
+                    <h3>24.99</h3><span>/task</span>
+                    <br>Billed Once</div>
+            </div>
+            <div class="plan-info center">
+                <ul>
+                    <li>1 Shopify task</li>
+                    <li>2 business days turn around</li>
+                    <li>6 hours response time</li>
+                </ul>
+                <a href="#contactForm" class="btn waves-effect waves-light grey-text theme-yellow text-darken-4">GET STARTED</a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="section">
     <div class="container">
-        <div class="row">
-            <div class="col m12 center">
-                <div class="pricing-chart plan-green">
-                    <h5 class="plan-name green-text">Green</h5>
-                    <div class="green-text"><i class="fa fa-bolt" aria-hidden="true"></i></div>
-                    <div class="border-pricing green"></div>
-                    <div class="plan-price"><span>$</span>
-                        <h3>299</h3><span>/mo</span></div>
-                    <p>24 hours a month</p>
-                    <a href="#contactForm" class="btn waves-effect waves-light grey-text text-darken-4 green">GET STARTED</a>
-                </div>
-                <div class="pricing-chart plan-red">
-                    <h5 class="plan-name red-text">Red</h5>
-                    <div class="red-text">
-                        <i class="fa fa-bolt" aria-hidden="true"></i><i class="fa fa-bolt" aria-hidden="true"></i></div>
-                    <div class="border-pricing red"></div>
-                    <div class="plan-price"><span>$</span>
-                        <h3>549</h3><span>/mo</span></div>
-                    <p>50 hours a month</p>
-                    <a href="#contactForm" class="btn waves-effect waves-light grey-text text-darken-4 red">GET STARTED</a>
-                </div>
-                <div class="pricing-chart plan-blue">
-                    <h5 class="plan-name blue-text">Blue</h5>
-                    <div class="blue-text"><i class="fa fa-bolt" aria-hidden="true"></i>
-                        <i class="fa fa-bolt" aria-hidden="true"></i>
-                        <i class="fa fa-bolt" aria-hidden="true"></i></div>
-                    <div class="border-pricing blue"></div>
-                    <div class="plan-price"><span>$</span>
-                        <h3>299</h3><span>/mo</span></div>
-                    <p>75 hours a month</p>
-                    <a href="#contactForm" class="btn waves-effect waves-light grey-text text-darken-4 blue">GET STARTED</a>
+        <div class="flex-container center">
+            <div class="pricing-toggle">
+                <span class="plan-selector" ng-class="{'selected' : selected == 0}" ng-click="selectMode(0)">Monthly</span>
+                <span class="plan-selector" ng-class="{'selected' : selected == 1}" ng-click="selectMode(1)">Quarterly</span>
+            </div>
+        </div>
+        <div class="flex-container pricing">
+            <div class="pricing-chart-container center" ng-repeat="item in plans">
+                <div class="plan-name" ng-class="{{item.planColor}}">{{item.planName}}</div>
+                <div class="plan-price" ng-class="{{item.headerColor}}"><span>$</span>
+                    <h3>{{item.price}}</h3><span>/mo</span></div>
+                <div class="plan-info">
+                    <ul>
+                        <li ng-repeat="desc in item.details">{{desc}}</li>
+                    </ul>
+                    <a href="#contactForm" class="btn waves-effect waves-light grey-text text-darken-4" ng-class="{{item.planColor}}">GET STARTED</a>
                 </div>
             </div>
         </div>
@@ -99,58 +109,76 @@
 <div class="container" id="contactForm">
     <div class="section">
         <div class="row center">
-            <h5 class="light">Send us your request today</h5>
+            <h5 class="light">Please do contact us if you need extra services.<br>Go through the staffing plans in case you need store maintenance support</h5>
         </div>
         <div class="row">
-            <form class="col s12">
+            <form class="col s12 contact-form" method="post" action="/contact.php?page=quote">
                 <div class="row">
                     <div class="input-field col s12 m6">
                         <i class="fa fa-user prefix" aria-hidden="true"></i>
-                        <input id="name" type="text" class="validate">
-                        <label for="name">Name</label>
+                        <input id="name" type="text" class="validate" name="name" required>
+                        <label for="name">Name *</label>
                     </div>
                     <div class="input-field col s12 m6">
                         <i class="fa fa-university prefix" aria-hidden="true"></i>
-                        <input id="businessName" type="text" class="validate">
-                        <label for="businessName">Business Name</label>
+                        <input id="businessName" type="text" class="validate" name="business_name" required>
+                        <label for="businessName">Business Name *</label>
                     </div>
                     <div class="input-field col s12 m6">
                         <i class="fa fa-envelope prefix" aria-hidden="true"></i>
-                        <input id="email" type="email" class="validate">
-                        <label for="email">Email Address</label>
+                        <input id="email" type="email" name="email" class="validate" required>
+                        <label for="email" data-error="Enter a valid email address">Email Address *</label>
                     </div>
                     <div class="input-field col s12 m6">
                         <i class="fa fa-phone prefix" aria-hidden="true"></i>
-                        <input id="phone" type="text" class="validate">
+                        <input id="phone" type="text" class="validate" name="phone" required>
                         <label for="phone">Phone</label>
                     </div>
                     <div class="input-field col s12 m6">
                         <i class="fa fa-globe prefix" aria-hidden="true"></i>
-                        <input id="weburl" type="text" class="validate">
+                        <input id="weburl" type="text" class="validate" name="weburl">
                         <label for="weburl">Website URL</label>
                     </div>
                     <div class="input-field col s12 m6">
                         <i class="fa fa-calendar prefix" aria-hidden="true"></i>
-                        <input type="date" class="datepicker" id="project_date">
+                        <input type="date" class="datepicker" id="project_date" name="duedate">
                         <label for="project_date">Project Due Date (if applicable)</label>
                     </div>
                     <div class="input-field col s12 m6">
-                        <i class="fa fa-dollar prefix" aria-hidden="true"></i>
-                        <select>
+                        <i class="fa fa-usd prefix" aria-hidden="true"></i>
+                        <select name="package">
                             <option value="" disabled selected>Choose your option</option>
-                            <option value="Basic">Basic</option>
-                            <option value="Complete">Complete</option>
+                            <option value="Single Task">Single Task</option>
+                            <option value="Green">Green</option>
+                            <option value="Orange">Orange</option>
+                            <option value="Blue">Blue</option>
                         </select>
-                        <label>Package Selected</label>
+                        <label>Task Package*</label>
+                    </div>
+                    <div class="input-field col s12 m6">
+                        <i class="fa fa-calendar-o prefix" aria-hidden="true"></i>
+                        <select name="subscription">
+                            <option value="" disabled selected>Choose your option</option>
+                            <option value="NA">N/A</option>
+                            <option value="Monthly">Monthly</option>
+                            <option value="Quarterly">Quarterly</option>
+                        </select>
+                        <label>Subscription Period*</label>
                     </div>
                     <div class="input-field col s12">
                         <i class="fa fa-comment prefix" aria-hidden="true"></i>
-                        <textarea id="textarea1" class="materialize-textarea" length="500"></textarea>
-                        <label for="textarea1">Describe what services your require</label>
+                        <textarea name="services" id="textarea1" class="materialize-textarea" length="1000" required></textarea>
+                        <label for="textarea1">Describe what services you require *</label>
+                    </div>
+                    <div class="form-error col s12 red-text">
+                        <div>There was a problem submitting your request, please try again.
+                            <br>Please enter the following fields</div>
+                        <div class="error-msg">
+                        </div>
                     </div>
                 </div>
                 <div class="row center">
-                    <a href="#" class="btn waves-effect waves-light grey-text text-darken-4 theme-yellow">GET QUOTE</a>
+                    <input type="submit" value="GET QUOTE" name="submit" class="btn waves-effect waves-light grey-text text-darken-4 theme-yellow">
                 </div>
             </form>
         </div>
